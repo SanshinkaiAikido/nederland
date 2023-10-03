@@ -7,7 +7,6 @@ else
     EXE=$(echo inkscape)
 fi
 
-cd svg
 for i in `ls *.svg|sort`; do
     PNG=../png/$(basename $i svg)png
 	$EXE $i -TCo $PNG 2>&1 >/dev/null
